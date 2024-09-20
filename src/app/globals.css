@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type="date"] {
+    -moz-appearance: textfield;
+  }
+}
+
+.single-thumb .range-slider__range {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  transition: height 0.3s;
+}
+
+.single-thumb .range-slider__thumb[data-lower] {
+  width: 0;
+}
+
+.single-thumb .range-slider__thumb[data-upper] {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.range-slider {
+  height: 0.5rem;
+  background: #e5e7eb;
+}
