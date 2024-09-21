@@ -71,12 +71,12 @@ const Slider: React.FC = () => {
           </div>
           <div className="text-center">
             <Wallet className="w-6 h-6 mx-auto mb-2 text-blue-500" />
-            <p className="text-xl font-bold">110'250</p>
+            <p className="text-xl font-bold">110250</p>
             <p className="text-sm text-gray-500">Staked</p>
           </div>
           <div className="text-center">
             <Trophy className="w-6 h-6 mx-auto mb-2 text-blue-500" />
-            <p className="text-xl font-bold">8'554</p>
+            <p className="text-xl font-bold">8554</p>
             <p className="text-sm text-gray-500">Rewards paid</p>
           </div>
         </div>

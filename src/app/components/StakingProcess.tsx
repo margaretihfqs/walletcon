@@ -1,10 +1,12 @@
 import React from 'react';
+import Image from 'next/image'; // Import the Image component
 
 const StakingStep = ({ imageUrl, title, description, number }) => (
   <div className="flex flex-col items-center text-center p-4 w-full md:w-1/2 mx-auto">
     <div className="relative mb-4">
       <div className="bg-white rounded-full p-6 w-32 h-32 flex items-center justify-center">
-        <img src={imageUrl} alt={title} className="w-16 h-16" />
+        {/* Replace img with Image component */}
+        <Image src={imageUrl} alt={title} width={64} height={64} className="w-16 h-16" />
       </div>
       <div className="absolute -top-4 -left-4 bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-2xl">
         {number}

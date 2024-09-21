@@ -3,22 +3,31 @@
 import { useWeb3Modal, useWalletInfo } from "@web3modal/wagmi/react";
 import { useState } from "react";
 import { useAccount } from "wagmi";
-import {Button} from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
+import Image from "next/image";
 
 export default function Navbar() {
-  const { open, close } = useWeb3Modal();
+  const { open } = useWeb3Modal();
   const { walletInfo } = useWalletInfo();
-  const { address, isConnecting, isDisconnected } = useAccount();
-  const [img, setImg] = useState();
+  const { address } = useAccount();
+  const [img, setImg] = useState(null); // Assuming you'll eventually set the img
 
   return (
     <div className="flex items-center justify-between p-4 border-b border-gray-800">
       <p className="font-bold text-gray-300 text-2xl">Dapp</p>
-      <img src={img} />
-      <button
-     className="bg-blue-gray-900"
-        onClick={() => open()}
-      >
+
+      {/* Conditionally render the image only if img is available */}
+      {img && (
+        <Image
+          src={img}
+          alt="Dapp logo"
+          width={40}
+          height={40}
+          className="rounded-full"
+        />
+      )}
+
+      <button className="bg-blue-gray-900 px-4 py-2 rounded-md" onClick={() => open()}>
         {!walletInfo ? (
           <div className="flex items-center space-x-2">
             <svg
@@ -27,7 +36,7 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-6"
+              className="w-6 h-6"
             >
               <path
                 strokeLinecap="round"
@@ -39,7 +48,16 @@ export default function Navbar() {
           </div>
         ) : (
           <div className="flex items-center space-x-2">
-            <img src={walletInfo.icon} className="size-6" />
+            {/* Optimized image for the wallet icon */}
+            {walletInfo.icon && (
+              <Image
+                src={walletInfo.icon}
+                alt="Wallet icon"
+                width={24}
+                height={24}
+                className="rounded-full"
+              />
+            )}
             <p>{`${address?.slice(0, 4)} ... ${address?.slice(-4)}`}</p>
           </div>
         )}

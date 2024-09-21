@@ -41,16 +41,16 @@ const FAQ = () => {
           FAQ
         </span>
       </div>
-      <h2 className="text-4xl font-bold text-center mb-4">We're here to answer all your questions.</h2>
+      <h2 className="text-4xl font-bold text-center mb-4">We are here to answer all your questions.</h2>
       <p className="text-center text-gray-600 mb-12">
-        If you're new to validation or looking to earn more with your current stack, this section will help you learn more about the platform and its features.
+        If you are new to validation or looking to earn more with your current stack, this section will help you learn more about the platform and its features.
       </p>
       <div className="space-y-4">
         <FAQItem question="Who can become a validator ?">
           <p>Anyone can become a validator for as little as USD 10.</p>
         </FAQItem>
         <FAQItem question="What are the advantages of becoming a validator?">
-          <p>Becoming a validator provides stable, long-term income. What's more, your daily earnings are secure, as your cryptocurrencies remain stored in your wallet, which is as safe as your bank account.</p>
+          <p>Becoming a validator provides stable, long-term income. Whats more, your daily earnings are secure, as your cryptocurrencies remain stored in your wallet, which is as safe as your bank account.</p>
         </FAQItem>
         <FAQItem question="What are the risks of becoming a validator?">
           <p>Cryptocurrency depreciation is the only risk. To minimize this risk as much as possible, we recommend being a validator of several different cryptocurrencies in particular.</p>
@@ -60,7 +60,7 @@ const FAQ = () => {
         </FAQItem>
         <FAQItem question="Why does the interest rate vary?">
         <p>The interest rate is based on 2 factors:</p>
-          <div className="space-y-4"> {/* Ajout de l'espacement vertical */}
+          <div className="space-y-4"> {/* Ajout de lespacement vertical */}
             <p>- The amount available in your validator wallet, which changes you from a pooled validator to a solo validator.</p>
             <p>- The choice of cryptocurrency because some reward validators more generously due to the large number of transactions.</p>
             </div>
